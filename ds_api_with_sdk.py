@@ -4,7 +4,7 @@ This code is only for test DeepSeek api with sdk.
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="sk-ec90e4d7506b49a990e08a1a89d50ee3",
+    api_key="{api-key}",
     base_url="https://api.deepseek.com/v1",
 )
 

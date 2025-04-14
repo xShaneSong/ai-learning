@@ -3,9 +3,7 @@ import json
 
 # DeepSeek API的URL
 url = "https://api.deepseek.com/chat/completions"
-
-# DeepSeek API的Key（请替换为你的实际API Key）
-api_key = "sk-ec90e4d7506b49a990e08a1a89d50ee3"
+api_key="{api-key}"
 
 # 请求的headers
 headers = {
