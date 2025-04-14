@@ -37,7 +37,7 @@ data = {
 }
 
 # 发送流式请求
-with requests.post(url, headers=headers, json=data, stream=True) as response:  # 客户端启用流式处理‌:ml-citation{ref="4,8" data="citationList"}
+with requests.post(url, headers=headers, json=data, stream=True) as response:
     if response.status_code == 200:
         # 逐行读取流式响应
         for line in response.iter_lines():
