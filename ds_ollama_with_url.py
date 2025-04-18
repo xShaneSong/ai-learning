@@ -2,7 +2,17 @@ import requests
 import json
 
 def chat_with_ollama(prompt, model="deepseek-r1:7b"):
-    url = "http://localhost:11434/api/chat"
+    """
+    与本地Ollama API进行交互的聊天函数
+    
+    参数:
+    prompt -- 用户的输入内容 (str)
+    model -- 要使用的模型名称 (默认: llama2)
+    
+    返回:
+    tuple -- (状态码, 响应内容/错误信息)
+    """
+    url = "http://10.1.20.62:11434/api/chat"
     
     headers = {
         "Content-Type": "application/json",
@@ -20,7 +30,7 @@ def chat_with_ollama(prompt, model="deepseek-r1:7b"):
     }
     
     try:
-        response = requests.post(url, headers=headers, json=payload, timeout=3000)
+        response = requests.post(url, headers=headers, json=payload, timeout=300)
         response.raise_for_status()
         
         # 解析响应内容

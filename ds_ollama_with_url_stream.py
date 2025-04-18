@@ -3,7 +3,18 @@ import json
 import time
 
 def stream_ollama_response(prompt, model="deepseek-r1:7b", timeout=30):
-    url = "http://localhost:11434/api/chat"
+    """
+    处理Ollama流式响应的生成器函数
+    
+    参数:
+    prompt -- 用户的输入内容 (str)
+    model -- 要使用的模型名称 (默认: llama2)
+    timeout -- 请求超时时间（秒）
+    
+    生成:
+    tuple -- (状态码, 响应内容) 或错误信息
+    """
+    url = "http://10.1.20.62:11434/api/chat"
     
     headers = {
         "Content-Type": "application/json",
