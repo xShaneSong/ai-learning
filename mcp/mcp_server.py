@@ -3,7 +3,7 @@ from fastapi import FastAPI
 import uvicorn
 
 # 初始化MCP服务实例
-mcp_server = FastMCP("UserSystem")
+mcp_server = FastMCP("UserSystem", port=9000)
 
 # mcp_server = FastMCP(
 #     name="UserSystem",
@@ -32,7 +32,7 @@ async def query_user(user_id: int) -> dict:
 # 启动服务
 if __name__ == "__main__":
     # mcp_server.run()
-    mcp_server.run(transport="sse", host="127.0.0.1", port=9000, log_level="debug")
+    mcp_server.run(transport="sse", log_level="debug")
     # asyncio.run(
     #     mcp_server.run_sse_async(
     #         host="127.0.0.1", 
