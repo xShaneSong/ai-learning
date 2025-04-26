@@ -57,7 +57,7 @@ tool = Tool(
 llm = ChatOpenAI(
     model="deepseek-chat",  # 指定 DeepSeek 支持的模型
     temperature=0,
-    openai_api_key="sk-ec90e4d7506b49a990e08a1a89d50ee3",  # 替换为你的 DeepSeek API 密钥
+    openai_api_key="{api-key}",  # 替换为你的 DeepSeek API 密钥
     openai_api_base="https://api.deepseek.com/v1"  # DeepSeek 的 API 基础地址
 )
 agent = initialize_agent(tools=[tool],

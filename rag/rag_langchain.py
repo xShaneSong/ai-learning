@@ -36,7 +36,7 @@ def setup_rag_chain(vectorstore, temperature=0.1):
     """配置RAG链式流程:ml-citation{ref="5,6" data="citationList"}"""
     # 初始化DeepSeek模型
     # llm = DeepSeek(
-    #     api_key="sk-ec90e4d7506b49a990e08a1a89d50ee3",
+    #     api_key="{api-key}",
     #     base_url="https://api.deepseek.com",
     #     model="deepseek-chat",
     #     temperature=temperature
