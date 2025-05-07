@@ -1,3 +1,6 @@
 rag/data
 rag/storage
 __pycache__
+*.db
+*.json
+*.yaml
