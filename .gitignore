@@ -4,3 +4,5 @@ __pycache__
 *.db
 *.json
 *.yaml
+test_cache
+*.csv
