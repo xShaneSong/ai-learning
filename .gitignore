@@ -6,3 +6,5 @@ __pycache__
 *.yaml
 test_cache
 *.csv
+chroma_db
+chroma
