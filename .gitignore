@@ -1,0 +1,11 @@
+*.json
+*.yaml
+*.db
+*.csv
+
+chroma
+chroma_db
+test_cache
+storage
+mcp
+data
