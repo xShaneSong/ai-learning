@@ -8,3 +8,4 @@ test_cache
 *.csv
 chroma_db
 chroma
+logs
