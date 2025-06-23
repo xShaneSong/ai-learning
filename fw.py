@@ -40,7 +40,7 @@ class TemplateTask:
     
     async def __call__(self, data: Dict[str, Any]) -> str:
         await asyncio.sleep(random.uniform(0.1, 0.5))  # Simulate network delay
-        input_value = ndata.get('name') or data.get('query', 'unknown')
+        input_value = data.get('name') or data.get('query', 'unknown')
         prompt = self.template.format(name_or_query=input_value)
         response = self.llm(prompt)
         print(f"Task completed: {response}")
@@ -70,7 +70,7 @@ class PerfomanceMonitor:
             end_time = time.time()
             elapsed_time = end_time - start_time
             self.execution_times.append(elapsed_time)
-            print(f"Task {task_name} executed in {execution_time:.2f} seconds")
+            print(f"Task {task_name} executed in {elapsed_time:.2f} seconds")
             return result
         return wrapper
     
